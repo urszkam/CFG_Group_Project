@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Title of our page</title>
-        <link rel="stylesheet" type="text/css" href="static/style.css">
+        <link rel="stylesheet" type="text/css" href="static/style/style.css">
         <script src="script/main.js"></script>
     </head>
     <body>
@@ -17,9 +17,9 @@
     <form method="POST">
         <div class="div-search">
             <div class="div-title">
-                <label for="movie">Enter the movie title:</label>
+                <label for="title">Enter the movie title:</label>
                 <br>
-                <input type="text" id="movie" name="movie">
+                <input type="text" id="title" name="title">
                 <br>
             </div>
             <div class="div-country">
@@ -29,7 +29,9 @@
                 <br>
             </div>
             <form id="location" method="GET">
+                <div class="div-checkbox">
                 <input type="checkbox" name="checkfield" id="country" onchange="xhr.getLocation(this)"/>get my location
+                </div>
             </form>
             <div class="search-button"><button type="submit" name="search-button">Search</button></div>
         </div>
