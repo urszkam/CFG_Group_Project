@@ -4,3 +4,5 @@
 
 API Documentation:
 * [IP Geolocation](https://ip-api.com/docs/api:json)
+* [Unofficial Netflix online Global Search](https://rapidapi.com/unogs/api/unogs)
+
