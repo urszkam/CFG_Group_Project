@@ -4,21 +4,25 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Title of our page</title>
-        <link rel="stylesheet" type="text/css" href="static/style/style.css">
+        <link rel="stylesheet" href="./static/style/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Edu+SA+Beginner&family=Roboto:ital@1&family=Shadows+Into+Light&display=swap" rel="stylesheet">
         <script src="script/main.js"></script>
     </head>
     <body>
-        <header>
+        <div class="header-wrap">
             <div class="logo-wrap">
-            <img src="../static/images/logo.png" class="logo" alt="Website logo">
+            <img src="static/images/logo.png" class="logo" alt="Website logo">
             </div>
-        </header>
-        <article>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+        </div>
+        <div class ="site-description-wrap">
+            <div class="textarea"><p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
                 ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
                 ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
                 reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-        </article>
+            </div>
+        </div>
         <div class="form-wrap">
             <form method="POST">
                 <div class="search-wrap">
@@ -36,7 +40,8 @@
                     </div>
                     <div class="checkbox-wrap">
                         <form id="location" name="location" method="GET">
-                            <input type="checkbox" name="checkfield" id="country" onchange="xhr.getLocation(this)"/>get my location
+                            <input type="checkbox" name="checkfield" id="country" onchange="xhr.getLocation(this)"/>
+                            <div class="get-location"><p>get my location<p></div>
                         </form>
                     </div>
                     <div class="search-button"><button type="submit" name="search-button">Search</button></div>
