@@ -18,7 +18,7 @@ img {
     height: auto;
 }
 
-p {
+p .description {
     padding: 0 1rem;
     text-align: center;
     color: #0a0908ff;
@@ -122,7 +122,7 @@ p {
     align-items: center;
     column-gap: 40px;
     background: pink;
-    flex: 2;
+    flex: 1.5;
     color: #0a0908ff;
     font-family: inherit;
     font-size: 16px;
@@ -144,7 +144,7 @@ p {
     margin: auto;
     width: 100%;
     max-width: 400px;
-    border-radius: 3px;
+    border-radius: 6px;
     overflow: hidden;
 }
 
@@ -211,3 +211,48 @@ input[type="text"]:focus +.focus-bg {
     transform: scaleX(1);
     transition: all .1s ease;
 }
+
+/* location checkbox */
+.local-check {
+    position: relative;
+    list-style: none;
+    text-align: center;
+    margin: 3px;
+    font-size: 16px;
+    font-family: inherit;
+  }
+      
+  .local-check label {
+    position: relative; 
+    cursor: pointer;
+  }
+  
+  .local-check label input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+  }
+        
+  .local-check label :checked ~ .icon-box {
+    box-shadow: inset -2px -2px 5px rgba(255, 255, 255, 1),
+      inset 3px 3px 5px rgba(0, 0, 0, 0.1);}
+  
+  .local-check label .fa {
+    transform: scale(0.95);
+  }
+        
+  .local-check .icon-box {
+    width: 200px;
+    height: 35px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: -2px -2px 5px rgba(255, 255, 255, 1),
+      3px 3px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 7px; 
+  }
+          
+  .local-check .icon-box .fa {
+    font-size: 27px;
+    color: #0a0908ff;
+  }

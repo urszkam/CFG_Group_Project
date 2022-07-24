@@ -8,6 +8,8 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Edu+SA+Beginner&family=Roboto&display=swap" rel="stylesheet">
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" 
+        rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
         <script src="script/main.js"></script>
     </head>
     <body>
@@ -42,8 +44,17 @@
                     </div>
                     <div class="checkbox-wrap">
                         <form id="location" name="location" method="GET">
-                            <input type="checkbox" name="checkfield" id="country" onchange="xhr.getLocation(this)"/>
-                            <div class="get-location"><p>get my location<p></div>
+                            <div class="local-check">
+                                <label><input type="checkbox" name="checkfield" id="country" onchange="xhr.getLocation(this)"/>
+                                    <div class="icon-box">
+                                        <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                        <p>&nbsp &nbsp get my location</p>
+                                    </div>
+                                </label>
+                            </div>  
+                            <!-- <div class="get-location">
+                                <p>get my location<p>
+                            </div> -->
                         </form>
                     </div>
                     <div class="movie-type-wrap">
