@@ -5,7 +5,7 @@
 }
 
 body {
-    color: red;
+    color: #0a0908ff;
     line-height: 1.6;
 }
 
@@ -14,7 +14,8 @@ a {
 }
 
 img {
-    width: 100%
+    max-width: 300px;
+    height: auto;
 }
 
 p {
@@ -22,30 +23,82 @@ p {
     text-align: center;
 }
 
+.full-height {
+    background: gold;
+    display: flex;
+    flex-direction: column;
+    min-height: 700px;
+    justify-content: flex-start;
+    align-content: stretch;
+    row-gap: 10px;
+    column-gap: 5%;
+}
+
 .header-wrap {
     display: flex;
     justify-content: center;
-
+    align-content: center;
+    background: red;
+    flex: 1;
 }
 
 .logo-wrap {
     align-self: center;
+    padding: 3% 0 1% 0;
+    background: green;
+}
+
+.site-description-wrap {
+    align-items: stretch;
+    background: red;
+    flex: 1;
+}
+
+.textarea {
+    display:flex;
+    justify-content: center;
+    align-self: center;
+}
+
+.description {
+    max-width: 700px;
 }
 
 .form-wrap {
     display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    background: red;
+    flex: 7;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: space-between;
+    align-self: stretch;
+    flex: none;
+    background: purple;
+    flex: 5;
 }
 
 .title-wrap {
     display: flex;
+    column-gap: 5px;
     justify-content: center;
     align-items: center;
+    background: green;
+    flex:1;
 }
 
 .country-wrap {
     display: flex;
+    column-gap: 5px;
     justify-content: center;
     align-items: center;
+    background: yellow;
+    flex: 1;
 }
 
 .checkbox-wrap {
@@ -53,11 +106,24 @@ p {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    background: pink;
 }
 
-.search-button {
-    align-self: center;
+.movie-type-wrap {
     display: flex;
-    align-items: flex-start;
+    flex-direction: row;
     justify-content: center;
+    align-items: center;
+    column-gap: 10px;
+    background: pink;
+    flex: 1;
+}
+
+.form-button {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    align-items: center;
+    background: blue;
+    flex: 2;
 }
