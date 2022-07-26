@@ -10,7 +10,6 @@ body {
     background-color: #fff;
     background-image: url("../images/movietape.png");
     background-position: left bottom; 
-    /* background-attachment: fixed; */
     background-repeat: no-repeat;
 }
 
@@ -378,4 +377,15 @@ input[type="text"]:focus +.focus-bg {
 
 .button-17:disabled {
   box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+}
+
+@media (max-width: 500px) {
+
+  body {
+    background-image: url("../images/movietape-mobile.png");
+   }
+
+  .hidden {
+    display: none;
+  }
 }
