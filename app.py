@@ -1,4 +1,4 @@
-# from flask import Flask, render_template, request
+from flask import Flask, render_template, request
 # from http.client import responses
 # from importlib.util import module_for_loader
 import requests
@@ -107,11 +107,20 @@ actors_list = actors(id)
 
 # @app.route('/', methods=['GET', 'POST'])
 # def index():
-#     if request.method == 'POST':
-#         title, country = formDetails()y
-#         searchNetflix()
-#         return render_template(
-#             'index.html', movie_details)
+#     return render_template(
+#             'index.html')
+
+# @app.route('/search-outcome', methods=['POST'])
+# def form():
+#     form_data = request.get_json()
+#     title_country = json.loads(form_data)
+#     title = title_country['title']
+#     country = title_country['country']
+
+#     response = search_netflix(title,movie_type,headers)
+#     movies_list = movies_list(response,title)
+
+#     return title_country
 
 # if __name__ == '__main__':
 #     app.run(debug=True)

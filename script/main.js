@@ -17,6 +17,24 @@ xhr.getLocation = function(checkboxElem) {
     }
 }
 
+function validateForm() {
+    const title = document.getElementById("title").value
+    const country = document.getElementById("country").value
+    if (!title || !country) {
+        alert("Please fill all required fields");
+        return false;
+      } 
+    const form_values = {title, country}
+    const form_json  = JSON.stringify(form_values); // Stringify converts a JavaScript object or value to a JSON string
+    console.log(form_json); // Prints the variables to console window, which are in the JSON format
+    window.alert(form_json)
+    $.ajax({
+        url:"/form",
+        type:"POST",
+        contentType: "application/json",
+        data: JSON.stringify(form_json)});
+}
+
 $(function($) {
     var openBtn = $("#open-button"),
       colseBtn = $("#close-button"),
@@ -38,4 +56,3 @@ $(function($) {
       }
     });
   })(jQuery);
-  
