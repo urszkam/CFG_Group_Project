@@ -1,10 +1,10 @@
-/* Everything here: */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
   }
   
+  /* Menu */
   .menu-wrap {
     position: fixed;
     right: 0;
@@ -23,7 +23,7 @@
   
   .menu-wrap .menu .icon-list a {
     position: relative;
-    font-family: "Oswald", "Helvetica Neue", Helvetica, sans-serif;
+    font-family: "Roboto," sans-serif;
     display: block;
     padding: 20px;
     text-decoration: none;
@@ -71,7 +71,7 @@
 
 #heading{
     text-align: center;
-    background-color: #747572;
+    background-color: #F2F4F3;
     border-radius: 100%;
 
 }
