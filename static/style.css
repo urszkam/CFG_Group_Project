@@ -8,7 +8,7 @@ body {
     line-height: 1.6;
     font-family: 'Roboto';
     background-color: #fff;
-    background-image: url("../images/movietape.png");
+    background-image: url("images/movietape.png");
     background-position: left bottom; 
     background-repeat: no-repeat;
 }
@@ -111,12 +111,12 @@ p {
 }
 
 
-.form-button {
+.search-button {
     display: flex;
     justify-content: center;
     align-self: center;
     align-items: center;
-    flex: 4;
+    flex: 2;
     color: #0a0908ff;
 }
 
@@ -346,7 +346,7 @@ input[type="text"]:focus +.focus-bg {
 
 .button-17:hover {
   background: #F6F9FE;
-  color: #747572;
+  color: #ffcf00ff;
 }
 
 .button-17:active {
@@ -356,7 +356,7 @@ input[type="text"]:focus +.focus-bg {
 
 .button-17:focus {
   outline: none;
-  border: 2px solid #747572;
+  border: 2px solid #ffcf00ff;
 }
 
 .button-17:not(:disabled) {
@@ -382,7 +382,7 @@ input[type="text"]:focus +.focus-bg {
 @media (max-width: 500px) {
 
   body {
-    background-image: url("../images/movietape-mobile.png");
+    background-image: url("images/movietape-mobile.png");
    }
 
   .hidden {

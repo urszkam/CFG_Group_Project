@@ -29,7 +29,7 @@ function validateForm() {
     console.log(form_json); // Prints the variables to console window, which are in the JSON format
     window.alert(form_json)
     $.ajax({
-        url:"/form",
+        url:"/search-outcome",
         type:"POST",
         contentType: "application/json",
         data: JSON.stringify(form_json)});

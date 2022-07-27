@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <title>GloboTv</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='moviedetails.css') }}"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Edu+SA+Beginner&family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" 
+    rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <script type="text/javascript" src="{{ url_for('static', filename='script/menu.js') }}"></script>
+  </head>
+  <body>
+  <!-- Menu: -->
+  <div class="menu-wrap">
+    <nav class="menu">
+      <div class="icon-list">
+        <a href="/"><span>Search again</span></a>
+        <a href="/about-us"><span>About us</span></a>
+      </div>
+      <button class="close-button fa fa-times" id="close-button"></button>
+    </nav>
+  </div>
+  <button class="menu-button fa fa-bars" id="open-button"></button>
+
+  <div class="container">
+    <div class="image">
+      <img src={{details.default_image}} class="poster" alt="your movie">
+    </div>
+    <div class="text">
+      <div class="movie-data">
+        <div class="first-column">
+          <p>Netflix id:&nbsp;&nbsp;&nbsp; {{ details.netflix_id }}<br>
+          Type:&nbsp;&nbsp;&nbsp;&nbsp; {{ details.title_type }}<br><p>
+        </div>
+        <div class="second-column">
+          <p>Release year:&nbsp;&nbsp;&nbsp;&nbsp; {{ details.year}}<br>
+          On Netflix from:&nbsp;&nbsp;&nbsp; {{ details.start_date }}<br></p>
+        </div>
+      </div>
+      <hr>
+      <p>Plot</p>
+      <p class="description">{{details.synopsis}}<p>
+      <hr>
+      <div class="text">
+        <p>Actors</p>
+        <ul class="actors">
+          {% for actor in actors_list%}
+            <li class="description">{{ actor }}</li>
+          {% endfor %}
+        </ul>
+      </div> 
+    </div> 
+  </body>
+</html>

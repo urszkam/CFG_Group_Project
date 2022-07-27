@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <title>GloboTv</title>
+        <script type="text/javascript" src="{{ url_for('static', filename='script/menu.js') }}"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Edu+SA+Beginner&family=Roboto&display=swap" rel="stylesheet">
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" 
+        rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        <script type="text/javascript" src="{{ url_for('static', filename='script/menu.js') }}"></script>
+    </head>
+    <body>
+        <div class="menu-wrap">
+            <nav class="menu">
+              <div class="icon-list">
+                <a href="/"><span>Search</span></a>
+                <a href="about-us.html"><span>About us</span></a>
+              </div>
+              <button class="close-button fa fa-times" id="close-button"></button>
+            </nav>
+        </div>
+        <button class="menu-button fa fa-bars" id="open-button"></button>
+        <div class="container">
+          <div class ="photo"><img src="us.png"></div>
+        </div>
+    </body>
+</html>

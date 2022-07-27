@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <title>GloboTV</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='searchdetails.css') }}"/>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Edu+SA+Beginner&family=Roboto:ital@1&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <script type="text/javascript" src="{{ url_for('static', filename='script/searchdetails.js') }}"></script>
+    </head>
+    <body>
+        <!-- Menu: -->
+        <div class="menu-wrap">
+            <nav class="menu">
+            <div class="icon-list">
+                <a href="/"><span>Search again</span></a>
+                <a href="/about-us"><span>About us</span></a>
+            </div>
+            <button class="close-button fa fa-times" id="close-button"></button>
+            </nav>
+        </div>
+        <button class="menu-button fa fa-bars" id="open-button"></button>
+        <h1 id="heading">Search Results</h1><br>
+        <div class="movieCards">
+            <div id="card">
+                <div class="movieImage"><img src={{details.default_image}} alt="img">  
+                </div><br>
+                <h3 class="caption">Title: {{details.title}} 
+                    {% if details.rating %}Rating: {{details.rating}}/5{% endif %}</h3>
+                    <br>
+                {% if avaliable %}
+                <div class="message"><p>You can watch it on Netflix in {{country}} and in {{num}} other countries.</p></div>
+                <br><br>
+                <form action="/movie/{{id}}/details" method="post">
+                    <div class="moreDetails"><button class="button-17" role="button">MORE DETAILS...</button></div>
+                </form>
+                {% else %}
+                <div class="message">
+                    <p>This title isn't avaliable in {{country}} <br>
+                    but you can find it in {{num}} other countries.</p>
+                </div>
+                <div class="countries-wrap">
+                    <ul class="countries">
+                        {% for country in other %}
+                        <li class="country">{{ country }}</li>
+                        {% endfor %}
+                    </ul>
+                </div> 
+                {% endif %}
+            </div>
+        </div>
+    </body>
+</html>

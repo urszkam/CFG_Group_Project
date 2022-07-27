@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='script/menu.js') }}"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
+    <title>GloboTV</title>
+    <link rel="stylesheet" type="text/css" href="../static/sorry.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Edu+SA+Beginner&family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="menu-wrap">
+        <nav class="menu">
+          <div class="icon-list">
+            <a href="/"><span>Search again </span></a>
+            <a href="/about-us"><span>About us </span></a>
+          </div>
+          <button class="close-button fa fa-times" id="close-button"></button>
+        </nav>
+    </div>
+        <button class="menu-button fa fa-bars" id="open-button"></button>
+    <div class="container">
+        {% if version != "exact" %}
+        <article>
+            <h1>Sorry!</h1>
+            <p class="text1">We were not able to identify the movie {{title}}.</p>
+            <p class="text2">You can search again</p>
+        </article>
+        <div class = "search-btn-wrap">
+            <button class="button-17" onclick="index()" role="button">SEARCH AGAIN</button> 
+        </div>
+        {% elif version == "exact" %}
+        <article>
+            <h1>Here are your results:</h1>
+        </article>
+        <div class="images-wrap">
+            {% for movie in exact %}
+            <a href="movie/{{movie.netflix_id}}/{{country}}">
+                <div class="single-image">
+                    <img class="images-suggested" onclick="movie()" src={{movie.img}}>
+                </div>
+            </a>
+            {% endfor %}
+        </div>
+        {% endif %}
+
+        {% if version != "sorry" %}
+        <div class="text3">
+            <p>or check out some similar titles:</p>
+        </div>
+        <div class="images-wrap">
+            {% for movie in similar %}
+            <a href="movie/{{movie.netflix_id}}/{{country}}">
+                <div class="single-image">
+                    <img class="images-suggested" onclick="movie()" src={{movie.img}}>
+                </div>
+            </a>
+            {% endfor %}
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
