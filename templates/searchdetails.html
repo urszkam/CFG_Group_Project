@@ -8,9 +8,9 @@
         <link rel="stylesheet" href="{{ url_for('static', filename='searchdetails.css') }}"/>
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
         <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Edu+SA+Beginner&family=Roboto:ital@1&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Edu+SA+Beginner&family=Roboto&display=swap" rel="stylesheet">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <script type="text/javascript" src="{{ url_for('static', filename='script/searchdetails.js') }}"></script>
+        <script type="text/javascript" src="{{ url_for('static', filename='script/menu.js') }}"></script>
     </head>
     <body>
         <!-- Menu: -->
@@ -24,6 +24,7 @@
             </nav>
         </div>
         <button class="menu-button fa fa-bars" id="open-button"></button>
+        <div class="container">
         <h1 id="heading">Search Results</h1><br>
         <div class="movieCards">
             <div id="card">
@@ -52,6 +53,7 @@
                 </div> 
                 {% endif %}
             </div>
+        </div>
         </div>
     </body>
 </html>
