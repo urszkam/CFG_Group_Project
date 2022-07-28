@@ -23,6 +23,7 @@ body {
   display: flex;
   align-content: center;
   justify-content: center;
+  height: 100vh;
 }
 
 .container {
@@ -31,14 +32,24 @@ body {
   flex-direction: column;
   justify-content: flex;
   align-content: stretch;
-  padding: 6% 0 5% 0;
+  margin-top: -5%;
   align-self: center;
 }
 
 img .poster {
-    max-width: 300px;
-    height: auto;
-    margin-bottom: 2%
+  max-width: 300px;
+  height: auto;
+  margin-bottom: 1%;
+  opacity: 0.7;
+}
+
+img {
+  margin-bottom: 1%;
+  opacity: 0.7;
+}
+
+img:hover {
+  opacity: 1.0;
 }
 
 .movie-data {
