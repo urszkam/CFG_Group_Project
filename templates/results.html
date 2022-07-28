@@ -7,7 +7,7 @@
     <script type="text/javascript" src="{{ url_for('static', filename='script/menu.js') }}"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
     <title>GloboTV</title>
-    <link rel="stylesheet" type="text/css" href="../static/sorry.css">
+    <link rel="stylesheet" type="text/css" href="../static/results.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Edu+SA+Beginner&family=Roboto&display=swap" rel="stylesheet">
@@ -31,7 +31,9 @@
             <p class="text2">You can search again</p>
         </article>
         <div class = "search-btn-wrap">
-            <button class="button-17" onclick="index()" role="button">SEARCH AGAIN</button> 
+            <form action="/" method="post">
+                <button class="button-17" role="button">SEARCH AGAIN</button> 
+            </form>
         </div>
         {% elif version == "exact" %}
         <article>
@@ -48,7 +50,7 @@
         </div>
         {% endif %}
 
-        {% if version != "sorry" %}
+        {% if similar %}
         <div class="text3">
             <p>or check out some similar titles:</p>
         </div>
