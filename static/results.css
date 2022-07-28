@@ -34,7 +34,7 @@ article {
 }
 
 article h1 {
-  font-family: 'Edu SA Beginner', cursive;
+  font-family: inherit;
   margin-bottom: 5%;
 }
 
