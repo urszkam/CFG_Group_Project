@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
         <title>GloboTv</title>
-        <script type="text/javascript" src="{{ url_for('static', filename='script/menu.js') }}"></script>
+        <link rel="stylesheet" href="{{ url_for('static', filename='aboutus.css') }}"/>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Edu+SA+Beginner&family=Roboto&display=swap" rel="stylesheet">
@@ -25,7 +25,18 @@
         </div>
         <button class="menu-button fa fa-bars" id="open-button"></button>
         <div class="container">
-          <div class ="photo"><img src="us.png"></div>
+          <div class ="photo"><img src="../static/images/us.png"></div>
+          <div class="description">
+            <p><b>Our Mission</b><br>
+              To make movies accessible to global audiences without resources.</p>
+            <p><b>History</b><br>
+              It all started from Code First Girls (CFG), An 8-week beginner-friendly 
+              course for girls that helped us learn the fundamentals on tech topics. 
+              This was our final project and it has been successful since then.</p>
+            <p><b>Services and Benefits</b><br>
+              Watch movies online for free. You can also can send us movie suggestions that you can't reach and we can add.</p>
+          </div>
         </div>
+
     </body>
 </html>

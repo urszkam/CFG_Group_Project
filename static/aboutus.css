@@ -10,6 +10,7 @@ body {
 
 .full-height {
     display: flex;
+    flex-direction: column;
     height: 100vh;
     justify-content: center;
     align-content: stretch;
@@ -17,6 +18,20 @@ body {
 
 .photo {
     align-self: center;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: stretch;
+  text-align: center;
+}
+
+p {
+  margin-top: 3%;
+  max-width: 700px;
+  align-self: center;
 }
 
 /* menu */
